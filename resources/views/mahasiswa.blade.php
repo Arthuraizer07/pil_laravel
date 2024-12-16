@@ -36,27 +36,71 @@
   </nav>
 <div class="container" style="margin-left: 30px">
   <h1>ini adalah halaman mahasiswa</h1>
-  <table class="table table-danger table-sm table-hover table-striped table-bordered text-center">
-    <thead>
-    <tr>
-      <th>NIM</th>
-      <th>Nama Mahasiswa</th>
-      <th>Jenis Kelamim</th>
-      <th colspan="2">TTL</th>
-    </tr>
-    </thead>
-    <tbody>
 
-      @for ($i = 0; $i < $jumlah; $i++)
-      <tr>
-        <td>{{ $npm[$i] }}</td>
-        <td>{{ $nama[$i] }}</td>
-        <td>Laki-laki</td>
-        <td>Kota Medan</td>
-      </tr>
-      @endfor
-    </tbody>
-  </table>
+  <div class="row">
+    <div  class="col-sm-6">
+      <h4>Tabel Mahasiswa</h4>
+      <table class="table table-danger table-sm table-hover table-striped table-bordered text-center">
+        <thead>
+        <tr>
+          <th>NIM</th>
+          <th>Nama Mahasiswa</th>
+          <th>Jenis Kelamim</th>
+          <th colspan="2">TTL</th>
+        </tr>
+        </thead>
+        <tbody>
+    
+          @for ($i = 0; $i < $jumlah; $i++)
+          <tr>
+            <td>{{ $npm[$i] }}</td>
+            <td>{{ $nama[$i] }}</td>
+            <td>Laki-laki</td>
+            <td>Kota Medan</td>
+          </tr>
+          @endfor
+        </tbody>
+      </table>
+    </div>
+    <div class="col-sm-6">
+      <h4>Form Mahasiswa</h4>
+      <form action="" method="POST">
+        <div class="row">
+          <div class="col-sm-6">
+            <label for="">NIM</label>
+            <input type="number" name="nim" class="form-control" placeholder="Input Nim">
+          </div>
+          <div class="col-sm-6">
+            <label for="">Nama Mahasiswa</label>
+            <input type="text" name="nama mahasiswa" id="" class="form-control" placeholder="Masukkan Nama">
+          </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-6">
+            <label for=""> Tanggal Lahir</label>
+            <input type="date" name="tanggal lahir" id="" class="form-control">
+            </div>
+          <div class="col-sm-6">
+            <label for="">Jurusan</label>
+            <select name="jurusan" id="" class="form-control">
+              <option>Tekhnik Komputer</option>
+              <option>Sistem Informasi</option>
+              <option>Matematika</option>
+              <option>Kimia</option>
+              <option>Fisika Terapan</option>
+              <option>Ilmu Perpustakaan</option>
+              <option>Ilmu Komunikasi</option>
+            </select>
+          </div>  
+        </div>
+        <div class="row mt-2">
+          <div class="col-sm-12">
+            <button class="btn btn-primary" style="width: 100%" type="submit">Simpan</button>
+          </div>
+        </div>
+      </form>
+  </div>
+
 </div>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
