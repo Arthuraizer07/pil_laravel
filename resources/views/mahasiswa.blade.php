@@ -38,34 +38,22 @@
   <h1>ini adalah halaman mahasiswa</h1>
   <table class="table table-danger table-sm table-hover table-striped table-bordered text-center">
     <thead>
-      <tr>
-        <th>NIM</th>
-        <th>Nama Mahasiswa</th>
-        <th>Jenis Kelamin</th>
-        <th colspan="2">TTL</th>
-      </tr>
+    
     </thead>
     <tbody>
+      <?php $nilai_awal = 0; ?>
+      @while ($nilai_awal < $jumlah)
+
       <tr>
-        <td>070304</td>
-        <td>Arthur</td>
+        <td>{{ $npm[$nilai_awal] }}</td>
+        <td>{{ $nama[$nilai_awal] }}</td>
         <td>Laki-laki</td>
         <td>20-02-2000</td>
-        <td rowspan="2">Kota Medan</td>
+        <td>Kota Medan</td>
       </tr>
-      <tr>
-        <td>141516</td>
-        <td>Sapri</td>
-        <td>Laki-laki</td>
-        <td>02-12-2002</td>
-      </tr>
-      <tr>
-        <td>373737</td>
-        <td>Muna</td>
-        <td>Laki-laki</td>
-        <td>13-04-2012</td>
-        <td>Kota Malang</td>
-      </tr>
+          
+      <?php $nilai_awal++ ?>
+      @endwhile
     </tbody>
   </table>
 </div>
