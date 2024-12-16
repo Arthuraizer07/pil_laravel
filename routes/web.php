@@ -22,9 +22,7 @@ Route::get('profil', function () {
 });
 
 Route::get('array', function () {
-    $nilai_awal = 1;
-    while ($nilai_awal <= 100) {
-        echo 'Hello Laravel' . $nilai_awal . 'X<br>';
-        $nilai_awal++;
+    for ($i = 1; $i <= 5; $i++) {
+        echo 'Hello' . $i . 'x<br>';
     }
 });
