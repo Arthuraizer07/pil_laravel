@@ -38,22 +38,23 @@
   <h1>ini adalah halaman mahasiswa</h1>
   <table class="table table-danger table-sm table-hover table-striped table-bordered text-center">
     <thead>
-    
+    <tr>
+      <th>NIM</th>
+      <th>Nama Mahasiswa</th>
+      <th>Jenis Kelamim</th>
+      <th colspan="2">TTL</th>
+    </tr>
     </thead>
     <tbody>
-      <?php $nilai_awal = 0; ?>
-      @while ($nilai_awal < $jumlah)
 
+      @for ($i = 0; $i < $jumlah; $i++)
       <tr>
-        <td>{{ $npm[$nilai_awal] }}</td>
-        <td>{{ $nama[$nilai_awal] }}</td>
+        <td>{{ $npm[$i] }}</td>
+        <td>{{ $nama[$i] }}</td>
         <td>Laki-laki</td>
-        <td>20-02-2000</td>
         <td>Kota Medan</td>
       </tr>
-          
-      <?php $nilai_awal++ ?>
-      @endwhile
+      @endfor
     </tbody>
   </table>
 </div>
